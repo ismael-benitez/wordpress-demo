@@ -4,8 +4,8 @@
 t ?= 20
 CONFIG_ENVIRONMENT ?= ./config/local.env
 ifneq (,$(wildcard $(CONFIG_ENVIRONMENT)))
-    include $(CONFIG_ENVIRONMENT)
-    export
+	include $(CONFIG_ENVIRONMENT)
+	export
 	DOCKER_COMPOSE = docker-compose --env-file $(CONFIG_ENVIRONMENT)
 endif
 
